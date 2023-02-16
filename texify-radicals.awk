@@ -1,4 +1,4 @@
-#!/opt/local/bin/gawk --lint -f 
+#!/opt/local/bin/gawk --lint -f
 BEGIN {FS="\t"; OFS="&"}
 function clink(c) {
   return "\\clnk{" c "}"
@@ -9,7 +9,7 @@ function clinkeach(s,    a, r, n) {
   for(i in a) {
     if ( a[i] == "，" || a[i] == ":") {
       r = r a[i]
-    } else { 
+    } else {
       r = r clink(a[i])
     }
   }
@@ -27,5 +27,5 @@ function improve(s) {
   return s
 }
    {
-      print clinkeach($1), clinkeach($2), clinkeach($3), $4, link($5), clinkeach($6), improve($7), $8 "\\nl" 
+      print clinkeach($1), clinkeach($2), $3, link($4), clinkeach($5), improve($6), $7 "\\nl"
    }
