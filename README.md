@@ -1,23 +1,24 @@
-The 100 most common chinese radicals
-====================================
+# Common Chinese Radicals
 
-A nicely typeset table of the 100 most common radicals in Chinese characters, 
-where all radicals and example characters are hyperlinked to www.archchinese.com.
+A nicely typeset table of  common radicals in Chinese characters, where all
+radicals and example characters are hyperlinked to https://archchinese.com.
 
-The original data this work is based on was prepared by Olle Linge, the author of www.hackingchinese.com, for
- http://www.hackingchinese.com/kickstart-your-character-learning-with-the-100-most-common-radicals/ .
+# Building
 
-If you want to recreate the [PDF](https://github.com/saigyo/common-chinese-radicals/raw/with-links/100-most-common-radicals.pdf) from the orginal .txt file you need to
-* apply the texify-radicals.awk script to the .txt file to get the .inc file
-* xelatex the .tex file with activated -shell-escape
+The build is only tested on arch linux, where the following packages are
+required:
 
-Activated -shell-escape is necessary because for each hyperlinked chinese character xelatex needs to call the urlenc.pl script for url-encoding of the characters, so that we can build correctly encoded URLs.
+* `texlive-most`
+* `texlive-langchinese`
+* `noto-fonts-cjk`
+* `noto-fonts`
 
-License
--------
+Then run `make` and `radicals.pdf` should be generated.
 
-The contents of the table (compilation of the radicals, examples and comments) are (C) 2012 Olle Linge.
+# Credits
 
-urlenc.pl was taken from http://yasuda.homeip.net/insomnia/2010/12/url-encode-in-latex.html and is (C) 2010 Isao Yasuda.
+This repository is forked from https://github.com/saigyo/common-chinese-radicals.
 
-The scripts and LaTeX macros for typesetting the table are free to take, modify and redistribute under a CC-BY-SA (creative commons-attribution-share alike) license.
+# License
+
+Under the original license, this repository is also CC-BY-SA.
