@@ -1,10 +1,10 @@
-all: 100-most-common-radicals.pdf
+all: radicals.pdf
 
-100-most-common-radicals.pdf: 100-most-common-radicals.inc
-	xelatex -shell-escape 100-most-common-radicals.tex
+radicals.pdf: radicals.inc
+	xelatex -shell-escape radicals.tex
 
-100-most-common-radicals.inc: 100-most-common-radicals.txt
-	gawk -f texify-radicals.awk 100-most-common-radicals.txt > 100-most-common-radicals.inc
+radicals.inc: radicals.txt
+	gawk -f texify-radicals.awk radicals.txt > radicals.inc
 
 clean:
-	rm *.aux *.log *.dat *.out *.pdf *.inc
+	rm -f *.aux *.log *.dat *.out *.pdf *.inc
