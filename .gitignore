@@ -2,3 +2,5 @@
 *.log
 *.dat
 *.out
+*.inc
+*.pdf
