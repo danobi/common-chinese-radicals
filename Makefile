@@ -1,6 +1,6 @@
 all: radicals.pdf
 
-radicals.pdf: radicals.inc
+radicals.pdf: radicals.inc radicals.tex
 	xelatex -shell-escape radicals.tex
 
 radicals.inc: radicals.txt
