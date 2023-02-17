@@ -30,4 +30,4 @@ This repository is forked from https://github.com/saigyo/common-chinese-radicals
 Under the original license, this repository is also CC-BY-SA.
 
 
-[0]: https://github.com/danobi/common-chinese-radicals/releases/latest/download/radicals.pdf
+[0]: https://github.com/danobi/radicals/releases/latest/download/radicals.pdf
